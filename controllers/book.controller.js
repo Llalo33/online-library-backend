@@ -1,6 +1,6 @@
-const Book = require('../models/book.model')
+const Book = require('../models/Book.model')
 
-const bookController = {
+const booksController = {
     getBook : async (req, res) => {
         try {
             const book = await Book.find()
@@ -61,4 +61,4 @@ const bookController = {
     }
 }
 
-module.exports = bookController
+module.exports = booksController

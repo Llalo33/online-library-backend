@@ -4,11 +4,11 @@ const mongoose = require('mongoose')
 const app = express()
 
 app.use(express.json())
-app.use('/users', require('./routs/user.router'))
-app.use('/admin', require('./routs/admin.router'))
-app.use('/books', require('./routs/book.router'))
-app.use('/genres', require('./routs/genres.router'))
-app.use('/reviews', require('./routs/reviews.router'))
+app.use('/users', require('./routes/users.route'))
+app.use('/admin', require('./routes/admins.route'))
+app.use('/books', require('./routes/books.route'))
+app.use('/genres', require('./routes/genres.route'))
+app.use('/reviews', require('./routes/reviews.route'))
 
 mongoose.connect("mongodb+srv://Lalo:1234@cluster0.hpgfhyn.mongodb.net/", {
 })

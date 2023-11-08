@@ -1,7 +1,7 @@
-const Book = require("../models/book.model");
-const User = require("../models/user.model");
+const Book = require("../models/Book.model");
+const User = require("../models/User.model");
 
-const userController = {
+const usersController = {
   getUsers : async (req, res) => {
     try {
       const user = await User.find();
@@ -93,4 +93,4 @@ const userController = {
   },
 };
 
-module.exports = userController;
+module.exports = usersController;

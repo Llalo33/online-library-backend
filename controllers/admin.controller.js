@@ -1,7 +1,7 @@
-const Book = require('../models/book.model')
-const User = require('../models/user.model')
+const Book = require('../models/Book.model')
+const User = require('../models/User.model')
 
-const adminController = {
+const adminsController = {
     blockUser : async (req, res) => {
         try {
             const deleteUser = await User.findById(req.params.id)
@@ -29,4 +29,4 @@ const adminController = {
     }
 }
 
-module.exports = adminController
+module.exports = adminsController

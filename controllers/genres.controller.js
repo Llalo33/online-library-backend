@@ -1,4 +1,4 @@
-const Genres = require('../models/genres.model')
+const Genres = require('../models/Genres.model')
 
 const genresController = {
     getGenres : async (req, res) => {
