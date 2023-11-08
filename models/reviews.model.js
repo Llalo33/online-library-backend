@@ -6,11 +6,6 @@ const reviewsSchema = mongoose.Schema({
         type : mongoose.SchemaTypes.ObjectId,
         ref : 'Book'
     },
-    renter : {
-        type : mongoose.SchemaTypes.ObjectId,
-        ref : 'User',
-        default : null
-    }
 })
 
 const Reviews = mongoose.model('Reviews', reviewsSchema)
