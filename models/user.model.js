@@ -3,10 +3,10 @@ const mongoose = require('mongoose')
 const userSchema = mongoose.Schema({
     name : String,
     email : String,
-    userBookId : {
+    userBookId : [{
         type : mongoose.SchemaTypes.Array,
         ref : 'Book'
-    },
+    }],
     isBlocked : Boolean,
     isAdmin : Boolean
 })
