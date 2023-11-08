@@ -53,9 +53,9 @@ const usersController = {
     try {
       const user = await User.findById(req.params.id);
       const book = await Book.findById(req.body.bookId);
-      if (user.isBlocked) {
+      if (user.isBlocked === true) {
         res.json(`You're block . Сontact our support`);
-      } else if (book.bookBorrowerId) {
+      } else if (book.bookBorrowerId !== null) {
         res.json(`Sorry, but this book is currently busy. Please wait`);
       } else if (user.userBookId.length >= 3) {
         res.json(`Sorry, but you took the maximum number of books`);
