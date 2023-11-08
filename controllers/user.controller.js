@@ -24,7 +24,6 @@ const usersController = {
         name: req.body.name,
         email: req.body.email,
         userBookId: req.body.userBookId,
-        isBlocked: req.body.isBlocked,
         isAdmin: req.body.isAdmin,
       });
       res.json(user);
