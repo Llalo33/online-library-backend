@@ -6,10 +6,6 @@ const bookSchema = mongoose.Schema({
         type : mongoose.SchemaTypes.ObjectId,
         ref : 'Genres'
     },
-    bookReviewsId : {
-        type : mongoose.SchemaTypes.ObjectId,
-        ref : 'Reviews'
-    },
     bookBorrowerId : {
         type : mongoose.SchemaTypes.ObjectId,
         ref : 'User'
