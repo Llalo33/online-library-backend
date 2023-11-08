@@ -1,12 +1,12 @@
-const express = require('express')
+const {Router} = require('express')
 const reviewsController = require('../controllers/reviews.controller')
 
 
-const rout = express()
+const router = Router()
 
-rout.get('', reviewsController.getReviews)
-rout.post('', reviewsController.postReviews)
-rout.patch('/:id', reviewsController.patchReviews)
-rout.delete('/:id', reviewsController.deleteReviews)
+router.get('', reviewsController.getReviews)
+router.post('', reviewsController.postReviews)
+router.patch('/:id', reviewsController.patchReviews)
+router.delete('/:id', reviewsController.deleteReviews)
 
-module.exports = rout
+module.exports = router
