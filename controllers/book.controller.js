@@ -14,7 +14,6 @@ const booksController = {
             const book = await Book.create({
                 name : req.body.name,
                 bookGenresId : req.body.bookGenresId,
-                bookReviewsId : req.body.bookReviewsId,
                 bookBorrowerId : req.body.bookBorrowerId
             })
             res.json(book)
