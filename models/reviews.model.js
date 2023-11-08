@@ -5,6 +5,11 @@ const reviewsSchema = mongoose.Schema({
     reviewsBookId : {
         type : mongoose.SchemaTypes.ObjectId,
         ref : 'Book'
+    },
+    renter : {
+        type : mongoose.SchemaTypes.ObjectId,
+        ref : 'User',
+        default : null
     }
 })
 
