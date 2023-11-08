@@ -1,12 +1,12 @@
-const express = require('express')
+const {Router} = require('express')
 const userController = require('../controllers/user.controller')
 
-const rout = express()
+const router = Router()
 
-rout.get('', userController.getUsers)
-rout.get('/:id', userController.getUserById)
-rout.post('/users', userController.postUser)
-rout.post('/:id/takeBook', userController.takeBook)
-rout.post('/:id/returnBook', userController.returnBook)
+router.get('', userController.getUsers)
+router.get('/:id', userController.getUserById)
+router.post('/users', userController.postUser)
+router.post('/:id/takeBook', userController.takeBook)
+router.post('/:id/returnBook', userController.returnBook)
 
-module.exports = rout
+module.exports = router
