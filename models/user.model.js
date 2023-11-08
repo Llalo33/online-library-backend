@@ -7,7 +7,10 @@ const userSchema = mongoose.Schema({
         type : mongoose.SchemaTypes.Array,
         ref : 'Book'
     }],
-    isBlocked : Boolean,
+    isBlocked : {
+        type : Boolean,
+        default : false
+    }
     isAdmin : Boolean
 })
 
