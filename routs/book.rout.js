@@ -1,10 +1,9 @@
-const express = require('express')
+const {Router} = require('express')
 const bookController = require('../controllers/book.controller')
 
+const router = Router()
 
-const rout = express()
+router.get('', bookController.getBook)
+router.get('/:id', bookController.getBookById)
 
-rout.get('', bookController.getBook)
-rout.get('/:id', bookController.getBookById)
-
-module.exports = rout
+module.exports = router
