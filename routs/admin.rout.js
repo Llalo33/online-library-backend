@@ -15,7 +15,6 @@ rout.post('/genres', genresController.postGenres)
 rout.patch('/genres/:id', genresController.patchGenres)
 rout.delete('/genres/:id', genresController.deleteGenres)
 
-rout.post('/users', userController.postUser)
 rout.patch('/users/:id', userController.patchUser)
 rout.delete('/users/:id', userController.deleteUser)
 
