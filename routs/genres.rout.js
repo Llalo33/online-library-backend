@@ -1,9 +1,9 @@
-const express = require('express')
+const {Router} = require('express')
 const genresController = require('../controllers/genres.controller')
 
 
-const rout = express()
+const router = Router()
 
-rout.get('', genresController.getGenres)
+router.get('', genresController.getGenres)
 
-module.exports = rout
+module.exports = router
