@@ -26,7 +26,6 @@ const booksController = {
             const book = await Book.findByIdAndUpdate(req.params.id , {
                 name : req.body.name,
                 bookGenresId : req.body.bookGenresId,
-                bookReviewsId : req.body.bookReviewsId,
                 bookBorrowerId : req.body.bookBorrowerId
             })
             res.json(book)
