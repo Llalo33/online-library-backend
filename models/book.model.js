@@ -8,7 +8,8 @@ const bookSchema = mongoose.Schema({
     },
     bookBorrowerId : {
         type : mongoose.SchemaTypes.ObjectId,
-        ref : 'User'
+        ref : 'User',
+        default : null
     }
 })
 
