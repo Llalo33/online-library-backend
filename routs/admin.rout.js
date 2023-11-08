@@ -1,24 +1,23 @@
-const express = require('express')
+const {Router} = require('express')
 const bookController = require('../controllers/book.controller')
 const genresController = require('../controllers/genres.controller')
 const userController = require('../controllers/user.controller')
 const adminController = require('../controllers/admin.controller')
 
+const router = Router()
 
-const rout = express()
+router.post('/book', bookController.postBook)
+router.patch('/book/:id', bookController.patchBook)
+router.delete('/book/:id', bookController.deleteBook)
 
-rout.post('/book', bookController.postBook)
-rout.patch('/book/:id', bookController.patchBook)
-rout.delete('/book/:id', bookController.deleteBook)
+router.post('/genres', genresController.postGenres)
+router.patch('/genres/:id', genresController.patchGenres)
+router.delete('/genres/:id', genresController.deleteGenres)
 
-rout.post('/genres', genresController.postGenres)
-rout.patch('/genres/:id', genresController.patchGenres)
-rout.delete('/genres/:id', genresController.deleteGenres)
+router.patch('/users/:id', userController.patchUser)
+router.delete('/users/:id', userController.deleteUser)
 
-rout.patch('/users/:id', userController.patchUser)
-rout.delete('/users/:id', userController.deleteUser)
-
-rout.get('/users/block/:id', adminController.blockUser)
-rout.get('/users/unlock/:id', adminController.unlockUser)
+router.get('/users/block/:id', adminController.blockUser)
+router.get('/users/unlock/:id', adminController.unlockUser)
 
 module.exports = rout
