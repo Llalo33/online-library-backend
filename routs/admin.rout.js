@@ -20,4 +20,4 @@ router.delete('/users/:id', userController.deleteUser)
 router.get('/users/block/:id', adminController.blockUser)
 router.get('/users/unlock/:id', adminController.unlockUser)
 
-module.exports = rout
+module.exports = router
